@@ -79,11 +79,8 @@ class MoCo(nn.Module):
 
 
 if __name__ == '__main__':
-    base_encoder = models.resnet18(num_classes=128)
 
-    moco = MoCo(
-        base_encoder=base_encoder,
-    )
+    moco = MoCo()
 
     im_q = torch.randn(2, 3, 224, 224)
     im_k = torch.randn(2, 3, 224, 224)
